@@ -1,6 +1,6 @@
 # 🏥 Dynamic Healthcare RAG Assistant
 
-**Deployment Link:** [https://conversational-rag-with-memory-assignment-5-9faj8scwm4mm6hc6vr.streamlit.app/](https://conversational-rag-with-memory-assignment-5-9faj8scwm4mm6hc6vr.streamlit.app/)
+**Deployment Link:** [CHatbot Demo](https://conversational-rag-with-memory-assignment-5-9faj8scwm4mm6hc6vr.streamlit.app/)
 
 ## Overview
 
@@ -154,3 +154,4 @@ This RAG system demonstrates all advanced features required for modern conversat
 ---
 
 **For educational purposes only. Always consult healthcare professionals for medical decisions.**
+
