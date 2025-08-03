@@ -34,24 +34,53 @@ A comprehensive RAG (Retrieval-Augmented Generation) system that maintains conve
 
 ## 🚀 **Quick Start**
 
-### **1. Install Dependencies:**
+### **Deployment Link**
+Access the live application at: [https://conversational-rag-with-memory-assignment-5-9faj8scwm4mm6hc6vr.streamlit.app/](https://conversational-rag-with-memory-assignment-5-9faj8scwm4mm6hc6vr.streamlit.app/)
+
+### **Setup Instructions:**
+
+#### **1. Clone the Repository:**
+```bash
+git clone https://github.com/yourusername/healthcare-rag-assistant.git
+cd healthcare-rag-assistant
+```
+
+#### **2. Create a Virtual Environment (Optional but Recommended):**
+```bash
+# For Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+# For macOS/Linux
+python -m venv .venv
+source .venv/bin/activate
+```
+
+#### **3. Install Dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-### **2. Set Environment Variables:**
-Create a `.env` file:
+#### **4. Set Environment Variables:**
+Create a `.env` file in the project root:
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-### **3. Run the Application:**
+### **Run Instructions:**
+
+#### **1. Start the Application:**
 ```bash
 streamlit run app.py
 ```
 
-### **4. Access the Application:**
+#### **2. Access the Application:**
 Open your browser and navigate to `http://localhost:8501`
+
+#### **3. Using the Application:**
+- Enter your health-related questions in the chat interface
+- The system will provide context-aware responses based on the knowledge base
+- Your conversation history will be maintained across sessions
 
 ## 🏆 **What You'll Get:**
 
@@ -374,7 +403,6 @@ This comprehensive RAG system demonstrates **ALL** the advanced features require
 - **Dynamic responses** with varied, contextual patterns
 
 The system is ready for production use and demonstrates the highest level of RAG implementation quality, making it an excellent candidate for shortlisting in advanced AI projects.
-
 ---
 
-**For educational and demonstration purposes only. Always consult healthcare professionals for medical decisions.** 
+**For educational and demonstration purposes only. Always consult healthcare professionals for medical decisions.**
