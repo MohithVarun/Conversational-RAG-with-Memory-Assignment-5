@@ -9,6 +9,10 @@ import logging
 import hashlib
 import re
 
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 # Try to import advanced embedding models
 try:
     from sentence_transformers import SentenceTransformer
@@ -16,10 +20,6 @@ try:
 except ImportError:
     EMBEDDING_MODEL_AVAILABLE = False
     logger.warning("sentence-transformers not available, using simple embeddings")
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 class AdvancedKnowledgeBase:
     """
@@ -754,4 +754,4 @@ Lifestyle factors such as regular exercise, adequate sleep, stress management, a
             if os.path.exists(filepath):
                 os.remove(filepath)
         
-        logger.info("Knowledge base cleared") 
+        logger.info("Knowledge base cleared")
