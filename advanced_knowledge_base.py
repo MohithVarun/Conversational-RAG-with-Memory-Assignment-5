@@ -17,9 +17,9 @@ logger = logging.getLogger(__name__)
 try:
     from sentence_transformers import SentenceTransformer
     EMBEDDING_MODEL_AVAILABLE = True
-except ImportError:
+except (ImportError, AttributeError) as e:
     EMBEDDING_MODEL_AVAILABLE = False
-    logger.warning("sentence-transformers not available, using simple embeddings")
+    logger.warning(f"Error loading sentence-transformers: {str(e)}. Using simple embeddings instead.")
 
 class AdvancedKnowledgeBase:
     """
@@ -362,10 +362,15 @@ class AdvancedKnowledgeBase:
     def _generate_chunk_embeddings(self, chunks: List[Dict]) -> List[np.ndarray]:
         """Generate embeddings for chunks."""
         if self.embedding_model:
-            # Use sentence transformers
-            texts = [chunk['content'] for chunk in chunks]
-            embeddings = self.embedding_model.encode(texts)
-            return embeddings.tolist()
+            try:
+                # Use sentence transformers
+                texts = [chunk['content'] for chunk in chunks]
+                embeddings = self.embedding_model.encode(texts)
+                return embeddings.tolist()
+            except Exception as e:
+                logger.warning(f"Error generating embeddings with model: {e}. Falling back to simple embeddings.")
+                # Fall back to simple embeddings on error
+                return [self._simple_embedding(chunk['content']) for chunk in chunks]
         else:
             # Simple fallback embedding
             return [self._simple_embedding(chunk['content']) for chunk in chunks]
@@ -400,7 +405,11 @@ class AdvancedKnowledgeBase:
         """Search knowledge base with semantic similarity and relevance scoring."""
         # Generate query embedding
         if self.embedding_model:
-            query_embedding = self.embedding_model.encode([query])[0]
+            try:
+                query_embedding = self.embedding_model.encode([query])[0]
+            except Exception as e:
+                logger.warning(f"Error encoding query with model: {e}. Falling back to simple embedding.")
+                query_embedding = self._simple_embedding(query)
         else:
             query_embedding = self._simple_embedding(query)
         
