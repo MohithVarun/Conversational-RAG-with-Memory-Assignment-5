@@ -1,0 +1,126 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+knowledge_db/
+memory_db/
+advanced_knowledge_db/
+advanced_memory_db/
+
+# API Keys and sensitive information
+.env
+
+# Large model files
+*.bin
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.json
+*.log
+.env
+.env.local
+.env.production
+
+# ChromaDB
+chroma_db/
+*.db
+*.sqlite
+
+# Model files
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# RAGAS
+.ragas_cache/
+
+# Streamlit
+.streamlit/
+
+# Logs
+logs/
+*.log
+
+# Data files
+data/
+datasets/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+
+# Model artifacts
+models/
+checkpoints/
+artifacts/
+
+# API keys and secrets
+secrets.json
+config.json
+credentials.json
