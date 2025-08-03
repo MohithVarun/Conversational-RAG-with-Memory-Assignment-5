@@ -20,7 +20,7 @@ A comprehensive RAG (Retrieval-Augmented Generation) system with multi-session m
 
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/healthcare-rag-assistant.git
+git clone https://github.com/MohithVarun/Conversational-RAG-with-Memory-Assignment-5.git
 cd healthcare-rag-assistant
 python -m venv .venv && .venv\Scripts\activate  # Windows
 # OR: python -m venv .venv && source .venv/bin/activate  # macOS/Linux
@@ -154,5 +154,6 @@ This RAG system demonstrates all advanced features required for modern conversat
 ---
 
 **For educational purposes only. Always consult healthcare professionals for medical decisions.**
+
 
 
